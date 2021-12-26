@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book list App</title>
+    <link rel="stylesheet" href="style.css">  
+    <link rel="icon" href="img/favicon.ico?v=2">
+</head>
+<body>
+    
+    <header class="header">
+        <h1>BookList</h1>
+        <div class="nav-links">
+            <a target="_blank" href="https://github.com/Epicsuru/BookList" class="nav-link">Source Code</a>
+        </div>
+    </header>
+
+    <div class="container " onsubmit='event.preventDefault(); return addBook()'>
+        
+        <div class="alert" id="alert">
+            <p id="alert-message"></p>
+        </div>
+
+        <div class="containera">
+            <form class="add-book-form">
+            <div class="form-group">
+                <label for="title">Book Title</label>
+                <input required type="text" name="book_title" id="bookTitle" class="form-input" placeholder="Enter Book Title">
+            </div>
+            <div class="form-group">
+                <label for="title">Book Author</label>
+                <input required type="text" name="bookAuthor" id="bookAuthor" class="form-input" placeholder="Enter Book Author">
+            </div>
+            <div class="form-group">
+                <label for="title">ISBN</label>
+                <input required type="text" name="bookISBN" id="bookISBN" class="form-input" placeholder="Enter ISBN">
+            </div>
+            <div class="form-group">
+                <button class="btn" type="submit" >Add Book</button>
+            </div>
+        </form>
+
+        </div>
+        
+
+        <div class="book-list">
+             <table>
+                 <thead>
+                   <tr>
+                     <th>Book Title</th>
+                     <th>Book Author</th>
+                     <th>Book ISBN</th>
+                     <th>Actions</th>
+                   </tr>
+                 </thead>
+                 <tbody id="book-list">
+                  
+                 </tbody>
+               </table>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
